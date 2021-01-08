@@ -15,8 +15,9 @@
   <title>Cookie Factory</title>
 </head>
 
-<!-- <body onload="myFunction()"> -->
-<!-- <div id="page" style="display:none;"> -->
+<body onload="myFunction()"> 
+<div id="page" style="display:none;" class="animate-bottom">
+
 <div id="sidebar">
   <img src="assets/img/cookies.png" class="logo" alt="website logo" />
   <h3>Cookie<br>Factory</h3>
@@ -24,9 +25,9 @@
     <h4 class="menu-item">
       <a href="./index.html">Cookies</a>
       <br></br>
-      <a href="">Add a Cookie</a>
+      <a href="./contactus.html">Add a Cookie</a>
       <br></br>
-      <a href="">See my Cart</a>
+      <a href="./mycart.html">See my Cart</a>
     </h4>
   </section>
 </div>
@@ -41,7 +42,7 @@
         <h5 class="card-title">
           <span>Creme Brulee Cookie</span>
         </h5>
-        <button type="button" class="btn btn-primary">Add to Cart</button>
+        <button onclick="addToCart(0)" type="button" class="btn btn-primary">Add to Cart</button>
       </div>
     </div>
   </div>
@@ -54,7 +55,7 @@
         <h5 class="card-title">
           <span>White Choco Orea Cookie</span>
         </h5>
-        <button type="button" class="btn btn-primary">Add to Cart</button>
+        <button onclick="addToCart(1)" type="button" class="btn btn-primary">Add to Cart</button>
       </div>
     </div>
   </div>
@@ -67,20 +68,39 @@
         <h5 class="card-title">
           <span>Mixed Dates Cookie</span>
         </h5>
-        <button type="button" class="btn btn-primary">Add to Cart</button>
+        <button onclick="addToCart(2)" type="button" class="btn btn-primary">Add to Cart</button>
+        
+       
+     
+
       </div>
     </div>
   </div>
 </div>
+
+<ul id="cart">
+
+</ul>
+
+<h5> total</h5>
+<h1 id="total"> 0 KD</h1>
+
+<button onclick="location.href='./mycart.html'" type="button"> Checkout</button>
+
 </div>
 <!-- بونص 👑 -->
 <div id="loader">
+  <button class="buttonload" >
+    <i class="fa fa-refresh fa-spin"></i>Loading
+  </button>
   <!-- قم بإضافة أيقونة التحميل هنا -->
 </div>
+<script src="./scripts.js"></script>
 <script>
     // كود اختبار أيقونة التحميل
-  /*
+  
   let myVar;
+  
   function myFunction() {
     myVar = setTimeout(showPage, 3000);
   }
@@ -88,7 +108,8 @@
     document.getElementById("loader").style.display = "none";
     document.getElementById("page").style.display = "block";
   }
-  */
+  
+
 </script>
 </body>
 
